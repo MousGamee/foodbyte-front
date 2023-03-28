@@ -8,7 +8,9 @@ const CustumTextInput = ({
     keyboardType,
     iconName,
     secureTextEntry,
-    moreStyle
+    moreStyle,
+    onChangeText,
+    value
 }) => {
     return (
         <View style={{
@@ -22,8 +24,10 @@ const CustumTextInput = ({
             <TextInput
             secureTextEntry={secureTextEntry}
             placeholder={placeholder}
-            placeholderTextColor={COLORS.light60}
+            placeholderTextColor={COLORS.white}
             keyboardType={keyboardType}
+            onChangeText={onChangeText}
+            value={value}
                 style={{
                     position: 'absolute',
                     width: '100%',
