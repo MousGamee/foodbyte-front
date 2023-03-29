@@ -1,15 +1,17 @@
 import { View, StatusBar, KeyboardAvoidingView, ImageBackground, Pressable, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { SIZES, COLORS } from '../../constants'
+import { SIZES, COLORS, ROUTES } from '../../constants'
 import images from '../../constants/images'
 import { BlurView } from 'expo-blur'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import CustumTextInput from '../../components/CustumTextInput'
 import CustumButton from '../../components/CustumButton'
 import CustumText from '../../components/CustumText'
+import { useNavigation } from '@react-navigation/native'
 
 
 const Register = () => {
+  const navigation = useNavigation()
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -74,7 +76,7 @@ const Register = () => {
 
         <CustumButton label={'Register'} />
 
-        <TouchableOpacity style={{ alignSelf: 'center', marginTop: SIZES.spacing * 2 }}>
+        <TouchableOpacity onPress={() => navigation.navigate(ROUTES.login)} style={{ alignSelf: 'center', marginTop: SIZES.spacing * 2 }}>
           <CustumText
             fontFamily={'regular'}
             style={{

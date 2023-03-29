@@ -95,13 +95,13 @@ export const SIZES = {
      margin: 20,
  
      // font sizes
-     largeTitle: 40,
+     largeTitle: width * .065,
      h1: 30,
      h2: 22,
      h3: 16,
      h4: 14,
      h5: 12,
-     body1: 30,
+     body1: width * .045,
      body2: 22,
      body3: 16,
      body4: 14,
@@ -110,9 +110,18 @@ export const SIZES = {
      // app dimensions
      width,
      height,
+
+     //Icon size
+     headerIcon : width * .055,
  
      headerHeight: height * .1,
      paddingHorizontal: width * .03,
      bigIcon: height * .035,
      spacing: height * .015,
+}
+
+export const ROUTES = {
+     login : 'login',
+     register : 'register',
+     forgotPassword : 'forgot-password'
 }
