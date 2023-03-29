@@ -8,12 +8,14 @@ import {
 } from 'react-native'
 import React from 'react'
 import images from '../../constants/images'
-import { COLORS, SIZES } from '../../constants'
+import { COLORS, ROUTES, SIZES } from '../../constants'
 import CustumText from '../../components/CustumText'
 import CustumTextInput from '../../components/CustumTextInput'
 import CustumButton from '../../components/CustumButton'
+import { useNavigation } from '@react-navigation/native'
 
 const Login = () => {
+const navigation = useNavigation()
     return (
         <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -38,7 +40,8 @@ const Login = () => {
                     resizeMode="contain"
                     style={{
                         width: SIZES.width * .6,
-                        alignSelf: 'center'
+                        alignSelf: 'center',
+                        marginTop : SIZES.spacing * 2
                     }}
                 />
                 {/* Login form */}
@@ -59,7 +62,7 @@ const Login = () => {
                         secureTextEntry={true}
                         moreStyle={{ marginBottom: SIZES.spacing }}
                     />
-                    <TouchableOpacity style={{
+                    <TouchableOpacity onPress={() => navigation.navigate(ROUTES.forgotPassword)} style={{
                         marginVertical: SIZES.spacing * 2
                     }}>
                         <CustumText
@@ -79,7 +82,7 @@ const Login = () => {
                         label='Login'
                     />
 
-                    <TouchableOpacity style={{ alignSelf: 'center', marginTop: SIZES.spacing * 2 }}>
+                    <TouchableOpacity onPress={() => navigation.navigate(ROUTES.register)} style={{ alignSelf: 'center', marginTop: SIZES.spacing * 2 }}>
                         <CustumText
                             fontFamily={'regular'}
                             style={{

@@ -1,11 +1,11 @@
-import Login from './src/screens/auth/Login';
-import AppLoading from 'expo-app-loading'
-import { useFonts } from 'expo-font';
-import Register from './src/screens/auth/Register';
+import { NavigationContainer } from '@react-navigation/native';
+import AuthStack from './src/navigation/AuthStack';
 
 export default function App() {
   return (
-  <Register/>
+    <NavigationContainer>
+      <AuthStack/>
+    </NavigationContainer>
   );
 }
 

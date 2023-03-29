@@ -3,11 +3,12 @@ import React from 'react'
 import CustumText from './CustumText'
 import { COLORS, SIZES } from '../constants'
 
-const CustumButton = ({ label, onPress }) => {
+const CustumButton = ({ label, onPress, moreStyle }) => {
   return (
     <TouchableOpacity 
     onPress={onPress}
     style={{
+        ...moreStyle,
         backgroundColor : COLORS.primary,
         height : SIZES.width * .14,
         justifyContent : 'center',
