@@ -16,7 +16,7 @@ const homeItem = [
         _id : 2,
         name : 'Uncle Boons',
         location : '394 Broome St, New York, NY 10013, USA',
-        isOpen : true,
+        isOpen : false,
         rating : 3,
         image : images.food2,
         category : 'libanais',

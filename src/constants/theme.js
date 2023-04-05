@@ -118,6 +118,10 @@ export const SIZES = {
      paddingHorizontal: width * .03,
      bigIcon: height * .035,
      spacing: height * .015,
+
+     //HomeCard
+     homeCardWith : width * .8,
+     homeCardHeight: width * .65,
 }
 
 export const ROUTES = {
@@ -125,4 +129,6 @@ export const ROUTES = {
      register: 'register',
      forgotPassword: 'forgot-password',
      home: 'home',
+     restaurantDetails : 'restaurantDetails',
+     main : 'main'
 }
