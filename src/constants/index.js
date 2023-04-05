@@ -1,6 +1,7 @@
 import { SIZES, COLORS, ROUTES } from "./theme";
 import images from "./images";
 import Icon, {Icons} from "./icons";
+import dummyData from "./dummyData";
 
 export {
     COLORS,
@@ -8,5 +9,6 @@ export {
     images,
     ROUTES,
     Icon,
-    Icons
+    Icons,
+    dummyData
 }
