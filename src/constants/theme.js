@@ -91,7 +91,7 @@ export const SIZES = {
      base: 8,
      font: 14,
      radius: 12,
-     padding: 24,
+     padding: 17,
      margin: 20,
 
      // font sizes
@@ -130,5 +130,6 @@ export const ROUTES = {
      forgotPassword: 'forgot-password',
      home: 'home',
      restaurantDetails : 'restaurantDetails',
-     main : 'main'
+     main : 'main',
+     trendingRestaurant : 'trendingRestaurant'
 }
