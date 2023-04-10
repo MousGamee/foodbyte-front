@@ -7,11 +7,12 @@ import Home from '../screens/home/Home';
 import Notification from '../screens/notification/Notification';
 import Profile from '../screens/profile/Profile'
 import { TouchableOpacity, StyleSheet, View } from 'react-native';
+import HomeStack from './HomeStack';
 
 const Tabs = createBottomTabNavigator()
 
 const TabArr = [
-  { route: 'Home', label: 'Home', type: Icons.Ionicons, activeIcon: 'grid', inActiveIcon: 'grid-outline', component: Home },
+  { route: 'HomeStack', label: 'Home', type: Icons.Ionicons, activeIcon: 'grid', inActiveIcon: 'grid-outline', component: HomeStack },
   { route: 'Like', label: 'Like', type: Icons.MaterialCommunityIcons, activeIcon: 'heart-plus', inActiveIcon: 'heart-plus-outline', component: Favoris },
   { route: 'Search', label: 'Search', type: Icons.MaterialCommunityIcons, activeIcon: 'timeline-plus', inActiveIcon: 'timeline-plus-outline', component: Notification },
   { route: 'Account', label: 'Account', type: Icons.FontAwesome, activeIcon: 'user-circle', inActiveIcon: 'user-circle-o', component: Profile },
